@@ -1,0 +1,49 @@
+params:
+  - id: admin_username
+    type: string
+    name: "openvpn admin user name"
+    description: "the admin user for openvpn web ui"
+
+  - id: admin_password
+    type: string
+    name: "openvpn admin user password"
+    description: "the admin user password for login web ui"
+
+  - id: enable_openvpn_gateway
+    type: bool
+    name: "enable openvpn gateway"
+    description: "if enable openvpn gateway,all openvpn client network traffic will be routed through the gateway device"
+
+  - id: openvpn_subnet
+    type: string
+    name: "openvpn ipv4 subnet"
+    description: "the ipv4 subnet for openvpn"
+    default_value: "10.8.0.0/24"
+
+  - id: openvpn_subnet6
+    type: string
+    name: "openvpn ipv6 subnet"
+    description: "the ipv6 subnet for openvpn"
+    default_value: "fdaf:f178:e916:6dd0::/64"
+
+locales:
+  zh:
+    admin_username:
+      name: "Openvpn管理员登录名"
+      description: "Openvpn管理界面的登录名"
+
+    admin_password:
+      name: "Openvpn管理员密码"
+      description: "Openvpn管理界面的登录密码"
+
+    enable_openvpn_gateway:
+      name: "启用Openvpn网关"
+      description: "启用Openvpn网关，所有openvpn客户端网络流量将通过网关设备路由"
+
+    openvpn_subnet:
+      name: "Openvpn ipv4子网"
+      description: "Openvpn的ipv4子网"
+
+    openvpn_subnet6:
+      name: "Openvpn ipv6子网"
+      description: "Openvpn的ipv6子网"

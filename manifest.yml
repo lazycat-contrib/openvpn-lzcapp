@@ -1,0 +1,46 @@
+name: Openvpn
+package: community.lazycat.app.openvpn
+version: 2.1.0
+min_os_version: 1.3.8
+description: OpenVPN 是一个开源VPN服务器
+homepage: https://github.com/dockers-x/openvpn
+author: czyt
+application:
+  subdomain: openvpn
+  background_task: true
+  public_path:
+    - /
+    - /api
+
+  upstreams:
+    - location: /
+      backend: http://openvpn:8833/
+
+  ingress:
+    - protocol: udp
+      port: 1194
+      service: openvpn
+
+services:
+  openvpn:
+    container_name: openvpn
+    #  czyt/openvpn:v2.1.0
+    image: registry.lazycat.cloud/czyt/czyt/openvpn:75f8e5a074ab1817
+    netadmin: true
+    environment:
+      # Auth Credentials
+      - ADMIN_USERNAME={{ .U.admin_username }}
+      - ADMIN_PASSWORD={{ .U.admin_password }}
+      - OVPN_GATEWAY={{ .U.enable_openvpn_gateway }}
+      - OVPN_SUBNET={{ .U.openvpn_subnet }}
+      - OVPN_SUBNET6={{ .U.openvpn_subnet6 }}
+    binds:
+      - /lzcapp/var/data:/data
+
+locales:
+  zh:
+    name: "Openvpn"
+    description: "OpenVPN 是一个开源VPN服务器"
+  en:
+    name: "Openvpn"
+    description: "OpenVPN is an open source VPN Service"
