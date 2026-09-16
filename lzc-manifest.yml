@@ -14,7 +14,7 @@ application:
 services:
   openvpn:
     # upstream: czyt/openvpn:v2.1.0
-    image: czyt/openvpn:v2.1.0
+    image: registry.lazycat.cloud/czyt/czyt/openvpn:75f8e5a074ab1817
     netadmin: true
     environment:
       - ADMIN_USERNAME={{ .U.admin_username }}
