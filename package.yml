@@ -1,0 +1,14 @@
+package: community.lazycat.app.openvpn
+version: 2.1.0
+name: Openvpn
+description: "OpenVPN 是一个开源VPN服务器"
+min_os_version: "1.5.0"
+homepage: https://github.com/dockers-x/openvpn
+author: czyt
+locales:
+  zh:
+    description: "OpenVPN 是一个开源VPN服务器"
+    name: Openvpn
+  en:
+    description: "OpenVPN is an open source VPN Service"
+    name: Openvpn
