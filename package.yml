@@ -1,4 +1,5 @@
 package: community.lazycat.app.openvpn
+license: MIT
 version: 2.1.0
 name: Openvpn
 description: "OpenVPN 是一个开源VPN服务器"
